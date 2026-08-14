@@ -515,19 +515,7 @@ CREATE TABLE `login_users` (
   `type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
---
--- Dumping data for table `login_users`
---
 
-INSERT INTO `login_users` (`id`, `owner`, `date`, `login_ip`, `type`) VALUES
-(1, 1, 1786525291, '49.47.128.41', '<b>[UserPanel]</b> -> Admin Logged In'),
-(2, 1, 1786658186, '64.176.81.101', '<b>[UserPanel]</b> -> Admin Logged In'),
-(3, 1, 1786668805, '64.176.81.101', '<b>[UserPanel]</b> -> Admin Logged In'),
-(4, 1, 1786675942, '64.176.81.101', '<b>[UserPanel]</b> -> Admin Logged In'),
-(5, 1, 1786681773, '64.176.81.101', '<b>[UserPanel]</b> -> Admin Logged In'),
-(6, 1, 1786685889, '64.176.81.101', '<b>[UserPanel]</b> -> Admin Logged In');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `mag_claims`
@@ -764,21 +752,7 @@ CREATE TABLE `panel_logs` (
   `date` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
---
--- Dumping data for table `panel_logs`
---
 
-INSERT INTO `panel_logs` (`id`, `log_message`, `date`) VALUES
-(1, 'MySQL Query Failed [SELECT s.id,s.stream_source,s.stream_options,s.transcode_profile_id,s.direct_source,ss.* FROM streams s LEFT JOIN streams_sys ss ON ss.stream_id=s.id AND ss.server_id=1 WHERE s.id=2]: Unknown column \'s.stream_options\' in \'SELECT\'', 1786671822),
-(2, 'MySQL Query Failed [SELECT * FROM settings WHERE name=\"show_expired_video\"]: Unknown column \'name\' in \'WHERE\'', 1786672427),
-(3, 'MySQL Query Failed [SELECT * FROM settings WHERE name=\"show_banned_video\"]: Unknown column \'name\' in \'WHERE\'', 1786672427),
-(4, 'MySQL Query Failed [SELECT * FROM settings WHERE name=\"show_not_on_air_video\"]: Unknown column \'name\' in \'WHERE\'', 1786672427),
-(5, 'MySQL Query Failed [SELECT * FROM settings WHERE name=\"expired_video_path\"]: Unknown column \'name\' in \'WHERE\'', 1786672427),
-(6, 'MySQL Query Failed [SELECT * FROM settings WHERE name=\"banned_video_path\"]: Unknown column \'name\' in \'WHERE\'', 1786672427),
-(7, 'MySQL Query Failed [SELECT * FROM settings WHERE name=\"not_on_air_video_path\"]: Unknown column \'name\' in \'WHERE\'', 1786672427),
-(8, 'MySQL Query Failed [SELECT id,stream_display_name,bouquets,type FROM streams WHERE id=2]: Unknown column \'bouquets\' in \'SELECT\'', 1786679382);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `providers`
@@ -801,49 +775,7 @@ CREATE TABLE `providers` (
   `download_time` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `providers`
---
 
-INSERT INTO `providers` (`id`, `username`, `password`, `name`, `dns`, `url`, `playlist`, `priority`, `notes`, `type`, `redirect`, `is_active`, `downloaded`, `download_time`) VALUES
-(47, 'the_boss_baby', 'EnMxgRZon1', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/', 'http://51.15.128.67:25461/panel_api.php?username=the_boss_baby&password=EnMxgRZon1', 'http://51.15.128.67:25461/get.php?username=the_boss_baby&password=EnMxgRZon1&type=m3u_plus&output=ts', NULL, 'boss baby swap 30 of N24 Poland for 30 XXX<br />\nDiscord: universaliptv#6741', 'XC', 0, 1, 1, '2026-08-12 01:26:26'),
-(65, 'IptvStreamNow100', 'GhWkQpiYdaXa', 'CIPO', 'http://important.ydns.eu:85', 'http://important.ydns.eu:85/panel_api.php?username=IptvStreamNow100&password=GhWkQpiYdaXa', 'http://important.ydns.eu:85/get.php?username=IptvStreamNow100&password=GhWkQpiYdaXa&type=m3u_plus&output=ts', NULL, '100 Swap.', 'XC', 0, 0, 1, '2022-04-12 15:24:12'),
-(67, 'IPTVStreamNow4028', 'vHimB5DdOiPEILfTpr4h5QJY', 'SILENTRIX', 'http://direct-local.com:8080', 'http://direct-local.com:8080/panel_api.php?username=IPTVStreamNow4028&password=vHimB5DdOiPEILfTpr4h5QJY', 'http://direct-local.com:8080/get.php?username=IPTVStreamNow4028&password=vHimB5DdOiPEILfTpr4h5QJY&type=m3u_plus&output=ts', NULL, 'SWAP 100 NO EXPIRE.', 'XC', 0, 0, 1, '2023-11-15 17:34:06'),
-(77, 'oldscholz8372', 'M73h6F526v3', 'GREENIE', 'http://bvhosting.xyz:8080/xctangerine333', 'http://bvhosting.xyz:8080/xctangerine333/panel_api.php?username=oldscholz8372&password=M73h6F526v3', 'http://bvhosting.xyz:8080/xctangerine333.php?username=oldscholz8372&password=M73h6F526v3&type=m3u_plus&output=ts', NULL, 'sw-aptwisted2', 'XC', 0, 0, 1, '2025-11-14 14:28:36'),
-(97, 'skipperN24', 'N53rm4QQ8yUx', 'HOMETOWN', 'http://endofroad.tech:2086', 'http://endofroad.tech:2086/panel_api.php?username=skipperN24&password=N53rm4QQ8yUx', 'http://endofroad.tech:2086/get.php?username=skipperN24&password=N53rm4QQ8yUx&type=m3u_plus&output=ts', NULL, 'A Roo1262 find.  Swap 100<br />', 'XC', 0, 1, 1, '2026-03-04 15:22:08'),
-(105, 'web24play', 'RdFhH3gDRk', 'DIEGO', 'http://mymoontools.xyz:8080', 'http://mymoontools.xyz:8080/panel_api.php?username=web24play&password=RdFhH3gDRk', 'http://mymoontools.xyz:8080/get.php?username=web24play&password=RdFhH3gDRk&type=m3u_plus&output=ts', NULL, 'ROO SWAP 100', 'XC', 0, 0, 1, '2025-03-10 17:41:20'),
-(115, 'Skipper783524', '@pmznEQt@WsD', 'NAAS', 'http://mirror.streamhubtv.ca:8080', 'http://mirror.streamhubtv.ca:8080/panel_api.php?username=Skipper783524&password=@pmznEQt@WsD', 'http://mirror.streamhubtv.ca:8080/get.php?username=Skipper783524&password=@pmznEQt@WsD&type=m3u_plus&output=ts', NULL, 'SWAP 150   ROO', 'XC', 0, 1, 1, '2026-03-04 15:22:09'),
-(116, 'x2hTndwrd9', 'r7R6ET97', 'PEOPLES-TV', 'http://iptvworld.nl:2095', 'http://iptvworld.nl:2095/panel_api.php?username=x2hTndwrd9&password=r7R6ET97', 'http://iptvworld.nl:2095/get.php?username=x2hTndwrd9&password=r7R6ET97&type=m3u_plus&output=ts', NULL, 'PEOPLES TV 50/50 SWAP.  MORE AFTER COVID.', 'XC', 0, 0, 1, '2023-08-07 18:47:30'),
-(117, 'mr', '6FaoQzNco3', 'PANDA2', 'https://diablo.ltd:25463', 'https://diablo.ltd:25463/panel_api.php?username=mr&password=6FaoQzNco3', 'https://diablo.ltd:25463/get.php?username=mr&password=6FaoQzNco3&type=m3u_plus&output=ts', NULL, NULL, 'XC', 0, 0, 1, '2022-04-12 15:55:49'),
-(122, 'n24', 'SUZsBNHv12', 'MVP', 'http://airwild2.xyz:2086', 'http://airwild2.xyz:2086/panel_api.php?username=n24&password=SUZsBNHv12', 'http://airwild2.xyz:2086/get.php?username=n24&password=SUZsBNHv12&type=m3u_plus&output=ts', NULL, 'Urban channels', 'XC', 0, 1, 1, '2026-03-04 15:22:12'),
-(123, 'Network25', '6X5446zey69U9B2826zc', 'unity swap', 'http://teamworkzone.fans', 'http://teamworkzone.fans/panel_api.php?username=Network25&password=6X5446zey69U9B2826zc', 'http://teamworkzone.fans/get.php?username=Network25&password=6X5446zey69U9B2826zc&type=m3u_plus&output=ts', NULL, 'UNITY SWAP', 'XC', 0, 1, 1, '2026-03-04 15:22:19'),
-(124, 'web24', 'tquVKLyBnzSv', 'SHARK', 'http://wedabest.site:8080', 'http://wedabest.site:8080/panel_api.php?username=web24&password=tquVKLyBnzSv', 'http://itscrazy.online:8080/get.php?username=web24&password=tquVKLyBnzSv&type=m3u_plus&output=ts', NULL, 'Roo. 50/50 swap', 'XC', 0, 1, 1, '2026-03-04 15:22:15'),
-(125, 'web24', 'AflwoNRhd5', 'Catalina', 'http://by.catalinatv.net:1997', 'http://by.catalinatv.net:1997/panel_api.php?username=web24&password=AflwoNRhd5', 'http://by.catalinatv.net:1997/get.php?username=web24&password=AflwoNRhd5&type=m3u_plus&output=ts', NULL, 'Roo 50/50 Swap', 'XC', 0, 1, 1, '2026-03-04 15:22:16'),
-(126, 'ioMicoMrr', '25665459', 'SANTO', 'http://tvdellamorte.xyz', 'http://tvdellamorte.xyz/panel_api.php?username=MioMicoMrr&password=25665459', 'http://tvdellamorte.xyz/get.php?username=MioMicoMrr&password=25665459&type=m3u_plus&output=ts', NULL, 'SANTO EXCHANGE', 'XC', 0, 0, 1, '2022-04-12 15:22:47'),
-(127, 'boss_baby', '34trfCzuo64SA', 'HANSK', 'http://iptv.watchhd.cc:5050', 'http://iptv.watchhd.cc:5050/panel_api.php?username=boss_baby&password=34trfCzuo64SA', 'http://iptv.watchhd.cc:5050/get.php?username=boss_baby&password=34trfCzuo64SA&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 1, 1, '2026-03-04 15:22:18'),
-(128, 'skippersRS22', 'hbXuNbqYKW', 'Joker', 'http://flashvpn.nl:8080', 'http://flashvpn.nl:8080/panel_api.php?username=skippersRS22&password=hbXuNbqYKW', 'http://flashvpn.nl:8080/get.php?username=skippersRS22&password=hbXuNbqYKW&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 1, 1, '2026-03-04 15:22:22'),
-(131, '9snhMXvb4V', 'fugD7uCk48', 'GUARDIAN', 'https://boreddonkey.xyz', 'https://boreddonkey.xyz/panel_api.php?username=9snhMXvb4V&password=fugD7uCk48', 'https://boreddonkey.xyz/get.php?username=9snhMXvb4V&password=fugD7uCk48&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 1, 1, '2026-03-04 15:22:34'),
-(132, 'Skipper', 'a2qBRpHfM5', 'PTV', 'http://ptvja.xyz:8080', 'http://ptvja.xyz:8080/panel_api.php?username=Skipper&password=a2qBRpHfM5', 'http://ptvja.xyz:8080/get.php?username=Skipper&password=a2qBRpHfM5&type=m3u&output=mpegts', NULL, NULL, NULL, 0, 1, 1, '2026-03-04 15:22:37'),
-(133, 'n24_direct', 'directlineforrestream', 'DUPE_N24', 'http://live.web24.live:8080', 'http://live.web24.live:8080/panel_api.php?username=n24_direct&password=directlineforrestream', 'http://web24.live:8081/get.php?username=recycle&password=network24&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2022-07-27 20:06:30'),
-(134, 'JackWells', '0pPaWXE8ec', 'JACK_WELLS', 'http://titanrest1.xyz:25461/', 'http://titanrest1.xyz:25461//panel_api.php?username=JackWells&password=0pPaWXE8ec', 'http://titanrest1.xyz:25461//get.php?username=JackWells&password=0pPaWXE8ec&type=m3u&output=mpegts', NULL, NULL, NULL, 0, 0, 1, '2022-07-27 20:06:29'),
-(135, 'plugplaymedia6453SP', 'vSh8zZSk', 'SVENSKI', 'http://master.webhop.net:25461', 'http://master.webhop.net:25461/panel_api.php?username=plugplaymedia6453SP&password=vSh8zZSk', 'http://master.webhop.net:25461/get.php?username=plugplaymedia6453SP&password=vSh8zZSk&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2022-10-16 20:06:08'),
-(136, 'recycle_n24', 'network24_selfrestream', 'RECYCLE_N24', 'http://live.web24.live:8080', 'http://live.web24.live:8080/panel_api.php?username=recycle_n24&password=network24_selfrestream', 'http://live.web24.live:8080/get.php?username=recycle_n24&password=network24_selfrestream&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 1, 1, '2026-03-04 15:22:21'),
-(137, 'skipper', '5Hq8apCb3HZurCq', 'JOKERVIP', 'http://x1.mywatch.cc:80', 'http://x1.mywatch.cc:80/panel_api.php?username=skipper&password=5Hq8apCb3HZurCq', 'http://xui.sstv.one:80/get.php?username=skipper&password=3101350&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2025-11-16 14:18:54'),
-(138, 'darkknight336', 'y3NURHpPEa', 'ultv', 'https://13hosting.xyz:8443', 'https://13hosting.xyz:8443/panel_api.php?username=darkknight336&password=y3NURHpPEa', 'https://13hosting.xyz:8443/get.php?username=darkknight336&password=y3NURHpPEa&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2025-05-13 16:04:11'),
-(139, 'skipper2024', 'rdDm8VTNGg', 'FEDERATION', 'http://hardcoremedia.xyz:80', 'http://hardcoremedia.xyz:80/panel_api.php?username=skipper2024&password=rdDm8VTNGg', 'http://hardcoremedia.xyz:80/get.php?username=skipper2024&password=rdDm8VTNGg&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 1, 1, '2026-03-04 15:22:29'),
-(140, 'sammie6804', '0M9hZZ7ibimrOZFP', 'i1iptv', 'http://l1iptv.xyz:80', 'http://l1iptv.xyz:80/panel_api.php?username=sammie6804&password=0M9hZZ7ibimrOZFP', 'http://l1iptv.xyz:80/get.php?username=sammie6804&password=0M9hZZ7ibimrOZFP&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2023-01-26 16:16:56'),
-(141, '1hosting', 'Z0A2AvZeYu', 'Unplugged', 'http://un-pluggedtv.net:8080', 'http://un-pluggedtv.net:8080/panel_api.php?username=1hosting&password=Z0A2AvZeYu', 'http://un-pluggedtv.net:8080/get.php?username=1hosting&password=Z0A2AvZeYu&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2023-01-19 22:42:41'),
-(142, 'kytv', 'tU7MJd6Zrb', 'kytv', 'http://181.215.178.135:80', 'http://181.215.178.135:80/panel_api.php?username=kytv&password=tU7MJd6Zrb', 'http://181.215.178.135:80/get.php?username=kytv&password=tU7MJd6Zrb&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2023-01-18 17:18:06'),
-(143, 'choosej8795if', 'smuck8654anutters', 'guardtest', 'https://tenwafers.xyz:443', 'https://tenwafers.xyz:443/panel_api.php?username=choosej8795if&password=smuck8654anutters', 'https://tenwafers.xyz:443/get.php?username=choosej8795if&password=smuck8654anutters&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2024-09-24 23:51:35'),
-(144, '4678', '2445', 'worldiptv', 'http://fast.myworldiptv.xyz', 'http://fast.myworldiptv.xyz/panel_api.php?username=4678&password=2445', NULL, NULL, NULL, NULL, 0, 0, 1, '2023-06-24 04:37:29'),
-(145, '8061903108', '272982919', 'huge', 'http://149.18.85.64:80', 'http://149.18.85.64:80/panel_api.php?username=8061903108&password=272982919', 'http://149.18.85.64:80/get.php?username=8061903108&password=272982919&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2023-08-26 04:44:38'),
-(146, 'skipper', '532401587', 'plugnplay', 'http://216.227.139.82', 'http://216.227.139.82/panel_api.php?username=skipper&password=532401587', 'http://216.227.139.82/get.php?username=skipper&password=532401587&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 1, 1, '2026-03-04 15:22:32'),
-(147, 'skiper4028a', '5272967777', 'MYOTT', 'http://restreamott.xyz', 'http://restreamott.xyz/panel_api.php?username=skiper4028a&password=5272967777', 'http://restreamott.xyz/get.php?username=skiper4028a&password=5272967777&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 1, 1, '2026-03-04 15:22:36'),
-(148, 'GenIptv2023', 'XkgMCdR7PJzShK5m', 'myteve', 'http://myteve.online:8080', 'http://myteve.online:8080/panel_api.php?username=GenIptv2023&password=XkgMCdR7PJzShK5m', 'http://myteve.online:8080/get.php?username=GenIptv2023&password=XkgMCdR7PJzShK5m&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2024-10-13 15:17:45'),
-(149, '832396169', '832396169', 'nclobotest', 'http://restream-live.realiptv.to:8080/', 'http://restream-live.realiptv.to:8080//panel_api.php?username=832396169&password=832396169', 'http://restream-live.realiptv.to:8080//get.php?username=832396169&password=832396169&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 1, '2024-10-13 15:17:35'),
-(150, 'web24play', 'RdFhH3gDRk', 'DIEGO2', 'http://mymoontools.xyz:8080', 'http://mymoontools.xyz:8080/panel_api.php?username=web24play&password=RdFhH3gDRk', 'http://mymoontools.xyz:8080/get.php?username=web24play&password=RdFhH3gDRk&type=m3u_plus&output=ts', NULL, NULL, NULL, 0, 0, 0, NULL);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `providers_streams`
@@ -859,257 +791,7 @@ CREATE TABLE `providers_streams` (
   `stream_url` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `providers_streams`
---
 
-INSERT INTO `providers_streams` (`stream_id`, `epg_id`, `stream_name`, `stream_category`, `stream_image`, `provider`, `stream_url`) VALUES
-(1, '', 'DORCEL', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/1.ts'),
-(2, '', 'VIVID RED', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/2.ts'),
-(3, '', 'HUSTLER HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/3.ts'),
-(4, '', 'PLAYBOY EUROPE', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/4.ts'),
-(5, '', 'ERO X', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/5.ts'),
-(6, '', 'BLACK TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/6.ts'),
-(7, '', 'PENTHOUSE REALITY TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/7.ts'),
-(8, '', 'REDLIGHT', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/8.ts'),
-(9, '', 'JASMIN', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/9.ts'),
-(10, '', 'PRIVATE', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/10.ts'),
-(11, '', 'RUSSKAYA NOCH', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/11.ts'),
-(12, '', 'NUART', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/12.ts'),
-(13, '', 'PASSION XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/13.ts'),
-(14, '', 'BABES TV RUSSIA', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/14.ts'),
-(16, '', 'ANGELS TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/16.ts'),
-(17, '', 'Extreme HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/17.ts'),
-(20, '', 'OH AH TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/20.ts'),
-(21, '', 'SHALUN TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/21.ts'),
-(22, '', 'FAP TV TEENS', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/22.ts'),
-(23, '', 'LUST PUR', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/23.ts'),
-(24, '', 'FAP TV 2', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/24.ts'),
-(25, '', 'FAP TV ANAL', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/25.ts'),
-(26, '', 'Dorcel Africa XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/26.ts'),
-(27, '', 'CENTO X CENTO', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/27.ts'),
-(28, '', 'FAP TV PARODY', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/28.ts'),
-(29, '', 'BRAZZERS', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/29.ts'),
-(31, '', 'EURONEWS', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/31.ts'),
-(32, '', 'FAP TV LESBIAN', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/32.ts'),
-(33, '', 'CAPABLE HOLE XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/33.ts'),
-(34, '', 'FAP TV 3', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/34.ts'),
-(35, '', 'FAP TV 4', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/35.ts'),
-(37, '', 'XXL', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/37.ts'),
-(40, '', 'ALBA XXX 1', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/40.ts'),
-(41, '', 'ALBA XXX 2', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/41.ts'),
-(42, '', 'PREMIUM PORN', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/42.ts'),
-(43, '', 'AL JAZEERA NEWS UK', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/43.ts'),
-(44, '', 'RT NEWS UK', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/44.ts'),
-(45, '', 'BLUE HUSTLER', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/45.ts'),
-(46, '', 'RHYMES', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/46.ts'),
-(47, '', 'ERT SPORT HD GR', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/47.ts'),
-(48, '', 'FOX NEWS US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/48.ts'),
-(49, '', 'ABC US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/49.ts'),
-(50, '', 'CBC CA', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/50.ts'),
-(51, '', 'CTV CA', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/51.ts'),
-(52, '', 'CBS US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/52.ts'),
-(53, '', 'FOX US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/53.ts'),
-(54, '', 'PBS US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/54.ts'),
-(55, '', 'USA NETWORK US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/55.ts'),
-(56, '', 'CW US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/56.ts'),
-(57, '', 'TENNIS CHANNEL US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/57.ts'),
-(58, '', 'RACING US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/58.ts'),
-(59, '', 'NASA TV US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/59.ts'),
-(60, '', 'FOOD NETWORK US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/60.ts'),
-(61, '', 'A AND E US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/61.ts'),
-(62, '', 'DISCOVERY US', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/62.ts'),
-(65, '', 'BRAVO TV CA', 'US AND CA', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/65.ts'),
-(71, '', 'MIAMI TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/71.ts'),
-(72, '', 'VOX AFRICA', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/72.ts'),
-(73, '', 'WORD NETWORK', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/73.ts'),
-(74, '', 'U9 TV', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/74.ts'),
-(75, '', 'TWOKOUL', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/75.ts'),
-(76, '', 'Television Nationale Haiti CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/76.ts'),
-(77, '', 'Television Haitienne CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/77.ts'),
-(78, '', 'TELE MIX CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/78.ts'),
-(79, '', 'TELE KISKEYA CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/79.ts'),
-(80, '', 'TELE CARAIBES  CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/80.ts'),
-(81, '', 'TELEBOSTON CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/81.ts'),
-(82, '', 'TELE 6 OKAY CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/82.ts'),
-(83, '', 'TBN TV CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/83.ts'),
-(84, '', 'NAGO TV CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/84.ts'),
-(85, '', 'KOUL TV CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/85.ts'),
-(86, '', 'CINE PAM CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/86.ts'),
-(87, '', 'SUPER ONE XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/87.ts'),
-(88, '', 'ALBA XXX 3', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/88.ts'),
-(89, '', 'ALBA XXX 4', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/89.ts'),
-(90, '', 'BLACKED', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/90.ts'),
-(91, '', 'FAST BOYZ GAY XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/91.ts'),
-(92, '', 'X-MO GAY XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/92.ts'),
-(93, '', 'Dorcel XXX HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/93.ts'),
-(94, '', 'HOT XXL HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/94.ts'),
-(95, '', 'Erox XXX HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/95.ts'),
-(96, '', 'Super One HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/96.ts'),
-(97, '', 'Evil Angel HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/97.ts'),
-(98, '', 'Dream Porn XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/98.ts'),
-(99, '', 'Babes TV HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/99.ts'),
-(100, '', 'SEX ATION HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/100.ts'),
-(101, '', 'XY Plus HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/101.ts'),
-(102, '', 'XY Max HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/102.ts'),
-(103, '', 'XY Mix HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/103.ts'),
-(104, '', 'Extasy HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/104.ts'),
-(105, '', 'Vivid TV Europe XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/105.ts'),
-(106, '', 'DUSK! XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/106.ts'),
-(107, '', 'Hustler TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/107.ts'),
-(108, '', 'Passie XXX XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/108.ts'),
-(109, '', 'Reality Kings TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/109.ts'),
-(110, '', 'Foxy Dolls HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/110.ts'),
-(111, '', 'Hot TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/111.ts'),
-(112, '', 'Venus TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/112.ts'),
-(113, '', 'Sextreme XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/113.ts'),
-(114, '', 'Sexy HOT XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/114.ts'),
-(115, '', 'Meiden Van Holland Hard XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/115.ts'),
-(116, '', 'X1 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/116.ts'),
-(117, '', 'X Bizarre XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/117.ts'),
-(118, '', 'X Desire XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/118.ts'),
-(119, '', 'X Bunga Bunga XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/119.ts'),
-(120, '', 'Pink Erotic XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/120.ts'),
-(121, '', 'Pink Erotic 2 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/121.ts'),
-(122, '', 'Pink Erotic 3 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/122.ts'),
-(123, '', 'Pink Erotic 4 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/123.ts'),
-(124, '', 'Pink Erotic 5 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/124.ts'),
-(125, '', 'Pink Erotic 6 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/125.ts'),
-(126, '', 'Pink Erotic 7 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/126.ts'),
-(127, '', 'Pink Erotic 8 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/127.ts'),
-(128, '', 'Balkan Erotic XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/128.ts'),
-(129, '', 'Taboo XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/129.ts'),
-(130, '', 'Oldtimer XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/130.ts'),
-(131, '', 'Leo TV Gold XXX ', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/131.ts'),
-(132, '', 'Net XX XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/132.ts'),
-(133, '', 'Playhouse XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/133.ts'),
-(134, '', 'Hot Pleasure XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/134.ts'),
-(135, '', 'Milf TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/135.ts'),
-(136, '', 'Red XXX XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/136.ts'),
-(137, '', 'Extrem XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/137.ts'),
-(138, '', 'Bang U XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/138.ts'),
-(139, '', 'Lesbian Affair XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/139.ts'),
-(140, '', 'Emanuelle XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/140.ts'),
-(141, '', 'French Lover XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/141.ts'),
-(142, '', 'French Lover Europe XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/142.ts'),
-(143, '', 'Blue Hustler HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/143.ts'),
-(144, '', 'Blue Hustler XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/144.ts'),
-(145, '', 'Barely Legal TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/145.ts'),
-(146, '', 'FREE X TV 2 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/146.ts'),
-(147, '', 'Secret Circle TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/147.ts'),
-(148, '', 'Exxxotica TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/148.ts'),
-(149, '', 'Beate Uhse.TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/149.ts'),
-(150, '', 'Leo TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/150.ts'),
-(151, '', 'Free X TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/151.ts'),
-(152, '', 'Candyman Gay Men XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/152.ts'),
-(156, '', 'FAKE AGENT 1 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/156.ts'),
-(157, '', 'FAKE AGENT 2 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/157.ts'),
-(158, '', 'FAKE AGENT 3 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/158.ts'),
-(159, '', 'XXX Live Cams', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/159.ts'),
-(160, '', 'XXX Anal', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/160.ts'),
-(161, '', 'XXX Big Ass', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/161.ts'),
-(162, '', 'XXX Big Dick', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/162.ts'),
-(163, '', 'XXX Big Tits', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/163.ts'),
-(164, '', 'XXX Blonde', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/164.ts'),
-(165, '', 'XXX Blowjob', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/165.ts'),
-(166, '', 'XXX Brunette', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/166.ts'),
-(167, '', 'XXX Compilation', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/167.ts'),
-(168, '', 'XXX Cuckold', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/168.ts'),
-(169, '', 'XXX Fetish', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/169.ts'),
-(170, '', 'XXX Gangbang', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/170.ts'),
-(171, '', 'XXX Gay', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/171.ts'),
-(172, '', 'XXX Hardcore', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/172.ts'),
-(173, '', 'XXX Interracial', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/173.ts'),
-(174, '', 'XXX Latina', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/174.ts'),
-(175, '', 'XXX Lesbian', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/175.ts'),
-(176, '', 'XXX MILF', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/176.ts'),
-(177, '', 'XXX Pornstar', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/177.ts'),
-(178, '', 'XXX POV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/178.ts'),
-(179, '', 'XXX Rough', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/179.ts'),
-(180, '', 'XXX Russian', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/180.ts'),
-(181, '', 'XXX Teen', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/181.ts'),
-(182, '', 'XXX Threesome', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/182.ts'),
-(184, '', 'BALKAN HOT 2 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/184.ts'),
-(185, '', 'PENTHOUSE GOLD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/185.ts'),
-(186, '', 'BooB TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/186.ts'),
-(187, '', 'TELE SOLEIL CAR', 'AFRICA AND CARIBES', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/187.ts'),
-(188, '', 'TBB 1 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/188.ts'),
-(189, '', 'TBB 2 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/189.ts'),
-(190, '', 'TBB 3 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/190.ts'),
-(191, '', 'TBB 4 XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/191.ts'),
-(192, '', 'TBB XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/192.ts'),
-(193, '', 'BALKAN HOT XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/193.ts'),
-(206, '', 'PORNSTERS 1', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/206.ts'),
-(207, '', 'PORNSTERS 2', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/207.ts'),
-(208, '', 'PORNSTERS 3', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/208.ts'),
-(209, '', 'PORNSTERS 4', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/209.ts'),
-(210, '', 'PORNSTERS 5', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/210.ts'),
-(211, '', 'PORNSTERS 6', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/211.ts'),
-(212, '', 'PORNSTERS 7', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/212.ts'),
-(213, '', 'PORNSTERS 8', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/213.ts'),
-(214, '', 'PORNSTERS 9', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/214.ts'),
-(215, '', 'PORNSTERS 10', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/215.ts'),
-(216, '', 'MC: HIT LIST', 'MUSIC CHOICE', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/216.ts'),
-(242, '', 'EXTASY 4K XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/242.ts'),
-(243, '', 'BANGERZ', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/243.ts'),
-(244, '', 'BIKINI TV XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/244.ts'),
-(245, '', 'Pinco Club XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/245.ts'),
-(246, '', 'Penthouse Naughty Nights', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/246.ts'),
-(247, '', 'MULTI 4K XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/247.ts'),
-(249, '', 'PURE BABES XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/249.ts'),
-(250, '', 'VIXEN HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/250.ts'),
-(251, '', 'FL KISS XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/251.ts'),
-(252, '', 'SHELK XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/252.ts'),
-(253, '', 'PENTHOUSE PASSION XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/253.ts'),
-(260, '', 'BLACK XXX 1', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/260.ts'),
-(261, '', 'BLACK XXX 2', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/261.ts'),
-(262, '', 'Adult Channel 1', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/262.ts'),
-(263, '', 'Adult Channel 2', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/263.ts'),
-(264, '', 'Adult Channel 3', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/264.ts'),
-(265, '', 'Adult Channel 4', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/265.ts'),
-(266, '', 'Adult Channel 5', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/266.ts'),
-(267, '', 'Adult Channel 6', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/267.ts'),
-(268, '', 'Adult Channel 7', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/268.ts'),
-(269, '', 'XXX CARTOON', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/269.ts'),
-(270, '', '4345', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/270.ts'),
-(271, '', 'JAV XXX JAPAN', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/271.ts'),
-(272, '', 'PUTA LOCURA XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/272.ts'),
-(277, '', 'HOT Man PT', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/277.ts'),
-(278, '', 'Playboy PT', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/278.ts'),
-(279, '', 'm+ liga', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/279.ts'),
-(280, '', 'suroyo sat', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/280.ts'),
-(282, '', 'HOT Taboo', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/282.ts'),
-(286, '', 'VIVID TOUCH XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/286.ts'),
-(287, '', 'Devils Home HD XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/287.ts'),
-(288, '', 'DESIRE HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/288.ts'),
-(289, '', 'GLAM HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/289.ts'),
-(290, '', 'TAZY XXX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/290.ts'),
-(291, '', 'Penthouse After Midnight', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/291.ts'),
-(292, '', 'Penthouse Naughty Nights', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/292.ts'),
-(293, '', 'Penthouse Black', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/293.ts'),
-(294, '', 'Free-X TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/294.ts'),
-(295, '', 'Free-X TV 2', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/295.ts'),
-(296, '', 'Free-X TV Black', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/296.ts'),
-(297, '', 'Free-X TV 2 Black', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/297.ts'),
-(298, '', 'X-Dream TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/298.ts'),
-(299, '', 'Television-X', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/299.ts'),
-(300, '', 'Daring! TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/300.ts'),
-(301, '', 'Daring! TV 2', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/301.ts'),
-(302, '', 'Daring! TV +', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/302.ts'),
-(303, '', 'Stars XxX', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/303.ts'),
-(304, '', 'Fun-X', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/304.ts'),
-(305, '', 'The Best Of BoX TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/305.ts'),
-(306, '', 'The Best Of Black TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/306.ts'),
-(307, '', 'Tushy Raw HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/307.ts'),
-(308, '', 'True Amateurs HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/308.ts'),
-(309, '', 'Purple Pills HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/309.ts'),
-(310, '', 'Gasscore HD', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/310.ts'),
-(311, '', 'Penthouse TV', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/311.ts'),
-(314, '', 'SATEN 100% ESPANOL', 'PORN', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/314.ts'),
-(510, '', 'Grenland2', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/510.ts'),
-(511, '', 'Grenland1', 'NEWS', '', 'UNIVERSAL (XXX)', 'http://51.15.128.67:25461/live/the_boss_baby/EnMxgRZon1/511.ts');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `reg_userlog`
@@ -1174,16 +856,7 @@ CREATE TABLE `reseller_credentials` (
   `ip_allow` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `reseller_credentials`
---
 
-INSERT INTO `reseller_credentials` (`id`, `member_id`, `api_key`, `ip_allow`) VALUES
-(1, '230', 'KvOsYRMd7Af2LEZ6/o7QQX/uTDMLYPZWg4nx76iVfiw=', '11.11.11.11'),
-(2, '131', 'fcfenK7hjQ+W1P9zMEoRHPkkzsvrEHYBsvCTDqIk514=', ''),
-(3, '52', 'CTJqJPNHexKSgEyBkwAmqzc/Udc9USWGb/2c5k1OFtA=', '11.11.11.11');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `reseller_imex`
@@ -1659,33 +1332,7 @@ CREATE TABLE `streams_filtered` (
   `END_TIME` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `streams_filtered`
---
 
-INSERT INTO `streams_filtered` (`stream_id`, `id`, `channel_id`, `stream_display_name`, `category_id`, `stream_icon`, `stream_source`, `type`, `epg_id`, `read_native`, `stream_all`, `gen_timestamps`, `allow_record`, `probesize_ondemand`, `START_TIME`, `END_TIME`) VALUES
-(1, 76549, '', '01 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(2, 76550, '', '02 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(3, 76551, '', '03 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(4, 76552, '', '04 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(5, 76553, '', '05 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(6, 76554, '', '06 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(7, 76555, '', '07 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(8, 76556, '', '08 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(9, 76557, '', '09 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(10, 76558, '', '10 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(11, 76559, '', '11 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(12, 76560, '', '12 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(13, 76561, '', '13 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(14, 76562, '', '14 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(15, 76563, '', '15 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(16, 76564, '#N/A', '16 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(17, 76565, '#N/A', '17 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(18, 76566, '#N/A', '18 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(19, 76567, '#N/A', '19 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL),
-(20, 76568, '#N/A', '20 REPLAY |', 319, 'https://i.imgur.com/TV8HjbK.png', '[\"/dhttp:\"]', 1, 0, 0, 0, 1, 1, 800000, NULL, NULL);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `streams_options`
@@ -1720,16 +1367,7 @@ CREATE TABLE `streams_providers` (
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
---
--- Dumping data for table `streams_providers`
---
 
-INSERT INTO `streams_providers` (`provider_id`, `provider_name`, `provider_dns`, `username`, `password`) VALUES
-(4, 'SILENTRIX1', 'http://direct-local.com:8080', 'IPTVStreamNow4028', 'vHimB5DdOiPEILfTpr4h5QJY'),
-(5, 'Diego/Armand', 'http://mymoontools.xyz:8080', 'web24play', 'RdFhH3gDRk'),
-(7, 'Greenie', 'http://bvhosting.xyz:8080', 'oldschool736d', 'ZvK5Caf4wuQ2/6');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `streams_seasons`
