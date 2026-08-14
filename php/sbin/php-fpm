@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR="$(dirname "$(readlink -f "$0")")"
+
+export PHPRC="$DIR/../etc/php-fpm.ini"
+export PHP_INI_SCAN_DIR="$DIR/../etc/conf.d"
+export LD_LIBRARY_PATH="$DIR/../lib:${LD_LIBRARY_PATH:-}"
+
+exec "$DIR/php-fpm8.3" "$@"

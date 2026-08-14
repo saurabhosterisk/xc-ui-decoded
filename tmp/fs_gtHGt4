@@ -1,0 +1,9 @@
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              6.3G  1.7M  6.3G   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   98G   15G   79G  16% /
+tmpfs                               32G     0   32G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+/dev/sda2                          2.0G  200M  1.6G  11% /boot
+tmpfs                               57G   27M   57G   1% /home/xtreamcodes/iptv_xtream_codes/streams
+tmpfs                              2.0G   60K  2.0G   1% /home/xtreamcodes/iptv_xtream_codes/tmp
+tmpfs                              6.3G   16K  6.3G   1% /run/user/0

@@ -1,0 +1,80 @@
+PHP 8.2 Compatibility Report
+
+PHP files scanned: 130
+Files changed: 0
+
+
+Manual review items:
+ - HTMLPurifier.standalone.php: get_magic_quotes_gpc() removed
+ - backups.php: each() found; requires manual loop rewrite
+ - bouquet.php: each() found; requires manual loop rewrite
+ - bouquet_order.php: each() found; requires manual loop rewrite
+ - bouquet_sort.php: each() found; requires manual loop rewrite
+ - bouquets.php: each() found; requires manual loop rewrite
+ - channel_order.php: each() found; requires manual loop rewrite
+ - channel_order_alt.php: each() found; requires manual loop rewrite
+ - created_channel.php: each() found; requires manual loop rewrite
+ - dashboard.php: each() found; requires manual loop rewrite
+ - database.php: get_magic_quotes_gpc() removed
+ - enigmas.php: each() found; requires manual loop rewrite
+ - epgs.php: each() found; requires manual loop rewrite
+ - episode.php: each() found; requires manual loop rewrite
+ - episode_import.php: each() found; requires manual loop rewrite
+ - episode_info.php: each() found; requires manual loop rewrite
+ - episodes.php: each() found; requires manual loop rewrite
+ - episodes_mass.php: each() found; requires manual loop rewrite
+ - flood_login.php: each() found; requires manual loop rewrite
+ - group.php: each() found; requires manual loop rewrite
+ - groups.php: each() found; requires manual loop rewrite
+ - ips.php: each() found; requires manual loop rewrite
+ - isps.php: each() found; requires manual loop rewrite
+ - live_connections.php: each() found; requires manual loop rewrite
+ - login_logs.php: each() found; requires manual loop rewrite
+ - mag_claims.php: each() found; requires manual loop rewrite
+ - mag_events.php: each() found; requires manual loop rewrite
+ - mags.php: each() found; requires manual loop rewrite
+ - mass_delete.php: each() found; requires manual loop rewrite
+ - movie.php: each() found; requires manual loop rewrite
+ - movie_info.php: each() found; requires manual loop rewrite
+ - movie_mass.php: each() found; requires manual loop rewrite
+ - movies.php: each() found; requires manual loop rewrite
+ - package.php: each() found; requires manual loop rewrite
+ - packages.php: each() found; requires manual loop rewrite
+ - process_monitor.php: each() found; requires manual loop rewrite
+ - profiles.php: each() found; requires manual loop rewrite
+ - radio.php: each() found; requires manual loop rewrite
+ - radio_mass.php: each() found; requires manual loop rewrite
+ - radios.php: each() found; requires manual loop rewrite
+ - reg_user.php: each() found; requires manual loop rewrite
+ - reg_user_logs.php: each() found; requires manual loop rewrite
+ - rtmp_ips.php: each() found; requires manual loop rewrite
+ - security_center.php: each() found; requires manual loop rewrite
+ - serie.php: each() found; requires manual loop rewrite
+ - series.php: each() found; requires manual loop rewrite
+ - series_mass.php: each() found; requires manual loop rewrite
+ - series_order.php: each() found; requires manual loop rewrite
+ - server.php: each() found; requires manual loop rewrite
+ - servers.php: each() found; requires manual loop rewrite
+ - settings.php: each() found; requires manual loop rewrite
+ - stream_categories.php: each() found; requires manual loop rewrite
+ - stream_mass.php: each() found; requires manual loop rewrite
+ - streams.php: each() found; requires manual loop rewrite
+ - subresellers.php: each() found; requires manual loop rewrite
+ - user.php: each() found; requires manual loop rewrite
+ - user_mass.php: each() found; requires manual loop rewrite
+ - user_reseller.php: each() found; requires manual loop rewrite
+ - user_reseller_edit.php: each() found; requires manual loop rewrite
+ - useragents.php: each() found; requires manual loop rewrite
+ - users.php: each() found; requires manual loop rewrite
+ - vod_import.php: each() found; requires manual loop rewrite
+ - watch.php: each() found; requires manual loop rewrite
+ - watch_add.php: each() found; requires manual loop rewrite
+ - watch_output.php: each() found; requires manual loop rewrite
+
+Automatic edits were limited to high-confidence compatibility fixes.
+
+Additional fixes:
+ - database.php
+ - HTMLPurifier.standalone.php
+
+PHP syntax checks (system PHP parser): 0 errors.
